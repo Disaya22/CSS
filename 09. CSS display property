@@ -1,0 +1,63 @@
+Display property
+
+1. Display property is a property that specifies 
+if or how an element is displayed.
+
+2. now HTML elements they have a default display value, 
+block level or inline
+
+3. an element that is block-lever starts on a new line, take up the full width available (h1, div, p, form, header, footer)
+
+4. inline elements do not start on a new line, width is limited to what is needed (span, a, img)  
+
+5. div element takes up the entire width
+   span element stays the same
+
+6. span can not define the width and height
+
+7. we can change the behavior of these elements by utilize the display property
+
+        1. we can apply a width and height, if we set span element to display as a block
+
+        2. inline-block, it’s much like inline but we can also apply a width and a height 
+
+        3. none will effectively erase that element
+
+8. visibility property is quite similar to display
+        1. if we set hidden to our element, this element is hidden but it’s still taking up space as if it was still there
+
+
+example
+#file index.html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+   
+    <div>div</div>
+    <span>span</span>
+</body>
+</html>
+
+
+#file style.css
+
+div{
+    background-color: hsl(0, 85%, 75%);
+    width: 100px;
+    height: 100px;
+    /* display: block; */
+    /* visibility: hidden; */
+}
+    span{
+    background-color: hsl(240, 61%, 70%);
+    width: 100px;
+    height: 100px;
+    /* display: inline; */
+}
+

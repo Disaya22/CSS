@@ -1,0 +1,135 @@
+#file index.htmml (only body)
+1. create a div section with a class of container
+2. within a div of container class, create a div section with a class of box and set id equal to box1
+3. set the inner text to be 1
+4. repeat trice times
+
+<div class="container">
+    <div class="box" id="box1">1</div>
+    <div class="box" id="box2">2</div>
+    <div class="box" id="box3">3</div>
+</div>
+
+
+#file style.css
+1. select box class and then set width and height, and then some css properties
+
+
+2. select box1,2,3 and 4 id and then add css properties
+
+
+3. with our container class, we can flex all of the element (all of inner div elements)
+
+
+4. take container class and set display to be flex
+5. by default, the flex direction property is set to row, but we set it with flex-direction
+
+
+6. justify-content sets the alignment on the main axis (x-axis แกนx เส้นนอน)
+7. we can justify elements on the main axis
+
+
+8. we will set the container to be
+
+.container{
+    display: flex;
+    border: 10px solid black;
+    height: 90vh;
+}
+
+9. and then add css properties
+
+align-items: baseline;
+
+
+10. so with the baseline, the text is going to be aligned
+11. we can notice the difference by changing the font size of box1
+
+#box1{
+    font-size: 2rem;
+    background-color: rgb(0, 0, 255);
+}
+
+
+12. we can notice that the number1 is aligned with the rest of the characters
+
+
+#file index.html
+13. duplicate the inner div section
+
+<div class="box" id="box4">4</div>
+
+#file style.css
+14. at container class, set flex-wrap property to be wrap
+15. we use flex-wrap along with align-content
+
+flex-wrap: wrap;
+    align-content: flex-start;
+
+
+16. there is no gap between each elements
+
+17. we can add css properties column gab to make a gap between each column
+
+column-gap: 1em;
+row-gap: 1em;
+
+
+18. align-self can be applied to any of these element
+
+#box1{
+    background-color: rgb(0, 0, 255);
+    align-self: center;
+}
+#box2{
+    background-color: green;
+}
+#box3{
+    background-color: yellow;
+    align-self: center;
+}
+#box4{
+    background-color: red;
+}
+
+All Code
+
+#file index.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="box" id="box1">1</div>
+        <div class="box" id="box2">2</div>
+        <div class="box" id="box3">3</div>
+        <div class="box" id="box4">4</div>
+    </div>
+</body>
+</html>
+
+#file style.css
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="box" id="box1">1</div>
+        <div class="box" id="box2">2</div>
+        <div class="box" id="box3">3</div>
+        <div class="box" id="box4">4</div>
+    </div>
+</body>
+</html>
+
+
+
+
+
+

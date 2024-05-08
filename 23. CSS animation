@@ -1,0 +1,152 @@
+#file index.html
+1. create a div selection with an id of box and set inner text to be Hi
+
+#file style.css
+2. select id of box and set width and height to be 250px
+
+3. to use an animation, we first need to create an animation using a keyframe rule
+@keyframes then a unique animation name
+
+4. let’s create an animation to slide this element from the right to the left
+so the name will be slideLeft{}
+
+
+5. within our keyframe there’s a few possible values you have
+
+6. "to" vs "from"
+
+@keyframes slideLeft{
+    from{ transform: translateX(100%)}
+}
+
+"from" means we will slide from the code to the original place (left on the top)
+
+
+@keyframes slideRight{
+    to { transform: translateX(100%)}
+}
+
+"to" means we will slide from the original place (left on the top) to the code 
+
+ึ7. let’s create a rotation animation
+8. we can use from or to or percent
+9. if we set the keyframes value to be 50%, we’ll complete this animation at the 50 % mark then form 50% to 100% in a way we undo the animation 
+10. so, we’ll rotate once and then revert back
+11. complete the animation at 50% percent of the length of the duration then other 50% of the time remaining return that element to where it was previously 
+12. So if we set the value to be 25%?
+
+
+
+13. create an animation to grow this element 
+14. we’ll scale both the width and height 
+15. set the transform property to be scale then we can use two value, first 2 means 200% for the width scale, second 2 means 200% for the height scale 
+
+16. change the opacity 
+17. if you want a fade in effect, we can set opacity to be 0 at the id of box
+
+opacity: 0;
+
+
+18. then at the 100% keyframes, the opacity will be 1
+
+@keyframes fadeIn{
+    100%{opacity: 1}
+}
+
+
+19. let’s chage the color of our element
+
+@keyframes changeColor{
+    0%{background-color: bisque}
+    20%{background-color: rgb(254, 207, 149)}
+    40%{background-color: rgb(244, 175, 90)}
+    60%{background-color: rgb(249, 161, 53)}
+    80%{background-color: rgb(252, 142, 8)}
+    100%{background-color: rgb(187, 105, 4)}
+}
+
+
+20. create a glow effect around our 
+21. the first value is for the horizontal offset, we’ll set that to be zero
+22. the second value is for the vertical offset. we’ll set to be zero
+23. the third value is for the blur radius, we’ll set to be 50px
+
+@keyframes glow{
+    50%{box-shadow: 0px 0px 50px rgb(248, 248, 10)}
+}
+
+
+24. we can start animation with a pseudo-class
+25. for example, we want the glow animation to occur when we hover over the element
+26. select id of box then apply the pseudo-class of hover
+27. we’ll take the animation mane and the duration then place them within the hover pseudo-class
+
+#box:hover{
+    animation-name: glow;
+    animation-duration: 4s;
+}
+
+
+28. if we use active pseudo-class, 
+this animation only occurs when we left click 
+and hold the element 
+
+#box:active{
+    animation-name: glow;
+    animation-duration: 4s;
+}
+
+
+29. to change the iteration count for and animation to have it occur more than once 
+30. we can set the animation-iteration-count property
+
+
+31. animation-direction 
+32. normal or reverse or alternative
+
+33. to pause the animation, we use animation-play-state: paused
+34. or animation-play-state: running, to run again
+35. this is useful in control with the programming language such as JS because we can toggle this animation on and off 
+    
+animation-play-state: running
+
+36. animation-timing-function
+37. normally with this animation, it accelerates then slows down it decelerates 
+38. the default value is ease-in-out, it speeds up then slows down before it reaches its destination
+
+animation-timing-function: ease-in-out;
+
+
+39. for a constant speed we can change that to be linear
+
+animation-timing-function: linear;
+
+40. we can also steps for a sort of stop motion effect 
+41. within this function, if we place the value 5, there’s 5 steps
+
+42. let’s set the iteration count to be 1
+43. animation-timing-function: cubic-bezier
+44. we can custom the acerelate
+
+animation-timing-function: cubic-bezier(0, -0.99, 0.8, 1.58);
+
+
+45. apply an animation to an image
+46. select an image and then paste those animation properties
+
+img{
+    animation-name: slideLeft;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-play-state: running;
+    animation-timing-function: cubic-bezier(0, -0.99, 0.8, 1.58);
+}
+
+
+
+
+
+
+
+

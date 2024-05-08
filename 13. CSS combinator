@@ -1,0 +1,102 @@
+Combinators
+
+1. A combinator explains the relationship 
+between listed selectors.
+
+2. There are 4 signs we’ll discuss today:
+           descendant which is just a space
+        >  child which is a right angle bracket
+        ~  general sibling which is general sibling
+        +  adjacent sibling which is for adjacent siblings
+
+
+for example,
+div > p ; it means we’re applying css properties 
+to any paragraph elements found within the div selection.
+
+
+example
+
+#file index.html (only body tags)
+<body>
+    <div id="container">
+        <p>This is #1</p>
+        <p>This is #2</p>
+        <div>
+            <p>This is #3</p>
+        </div>
+    </div>
+	<div>
+        <p>This is #4</p>
+        <p>This is #5</p>
+	</div>
+	<p>This is #6</p>
+    <p>This is #7</p>
+    </body>
+
+
+#file style.css
+
+ 1. descendant 
+#container{
+    border: 2px solid;
+}
+   
+#container p{
+    background-color: yellow;
+}
+
+result #1 #2 #3 will be highlighted
+
+2. child
+#container{
+    border: 2px solid;
+}
+   
+#container > p{
+    background-color: yellow;
+}
+
+result #1 #2 will be highlighted
+because #3 is not technically a child, 
+it’s a descendant. #3 is one more deep.
+it’s wrapped within another div section.
+
+all children are descendants but not all descendants are children.
+
+
+3. general sibling 
+#container{
+    border: 2px solid;
+}
+   
+#container ~ p{
+    background-color: yellow;
+}
+
+result #4 #5 will be highlight
+because #4 #5 are both siblings 
+to our container.
+
+they’re both considered as 
+children of the body of the document
+while #6 #7 are not siblings. 
+div section is a sibling 
+to the first div
+
+4. adjacent sibling
+file style.css
+#container{
+    border: 2px solid;
+}
+   
+#container + p{
+    background-color: yellow;
+}
+
+result #4 will only be highlighted 
+because there is only one adjacent 
+sibling which is #4
+
+adjacent sibling is the next direct 
+sibling but not all sibling.

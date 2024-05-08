@@ -1,0 +1,152 @@
+Website Layout 
+1. semantic tag include but not limited to
+    1. Header are used for introductory contents such as a title, a logo or author information
+
+    2. Nav are used for navigation bar or other links
+
+    3. Main = main content can contains many sub element such as section, aside, article, div (generic div element)
+
+    4. Section is for dependent content. you can put anything you want within a section 
+
+    5. Aside is side content such as fun fact, quotes, external link or comments
+
+    6.Article represents independent content. this include news article, job posts or blog posts
+    it’s independent content. it’s not rely on the text of the website
+  
+    7.Footer is for closing content including author information, copyright information.
+
+2. Semantic tag keeps your content organized 
+3. they’re better for SEO (search engine optimization)
+4. they assists screen readers and other for accessibility
+
+
+#file index.html
+1. we’ll create <header>, <nav>, <main> and <footer>
+2. within <header>, we’ll create h2 element with hello text 
+
+3. set the class of navbar for <nav>
+
+4. main element include <aside>, <section>, <article>
+5. within <aside>, <section>, <article> element, we’ll create h2 element and <p> element
+
+6. add <h2> to <footer>
+
+
+
+#file style.css
+1. we take header element and then add some css properties
+
+2. select our navbar class, then add some css properties
+
+3. we’ll add some css properties for <aside>, <section> and <article>
+4. the total width of web page is 100%
+5. if we add padding, the content will not….
+6. when we calculate the width, we don’t take into account any padding
+7. so, we will select all element and then set the box-sizing to be border-box
+
+ 
+8. add some css properties for <footer>
+9. set display to be block
+10. clear all float by setting clear to be both
+
+Responsive css
+1. this is a basic website layout for a desktop 
+2. this isn’t a good format for a mobile device though
+3. with a mobile device you would want each of these elemetns to be on top of each other, so you can scroll down
+4. we will add @media screen
+
+@media screen and (max-width: 600px){
+    aside, section, article{
+        width: 100%;
+    }
+}
+
+5. what we’re doing here is that if the width of our screen or window is 600 px or below, 
+6. we can change css properties with <aside>, <section> and <article> 
+7. and then we’ll change the width to be 100px
+
+
+8. if a user is on a mobile device and/or the width is 600 px or below
+9. then we’ll switch to a mobile version of the web page 
+10. <aside>, <section> and <article> element are taking up 100 of the width avaiable 
+
+
+All Code 
+#file index.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h2>Hello</h2>
+    </header>
+    <nav class="navbar"></nav>
+    <main>
+        <aside>
+            <h2>This is aside</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, saepe temporibus? Cum quos labore blanditiis nostrum amet at repellendus. Saepe officiis modi nisi, rem voluptatem ducimus ea veniam incidunt excepturi!</p>
+        </aside>
+        <section>
+            <h2>This is a section</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut debitis quos consectetur ipsum sequi aliquam assumenda corporis nobis, sapiente molestias deleniti modi harum. Quo mollitia excepturi soluta voluptates, itaque beatae.</p>
+        </section>
+           
+        <article>
+            <h2>This is an article</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur, delectus assumenda ab aperiam itaque minus saepe explicabo, repudiandae impedit corrupti suscipit mollitia facere. Assumenda deleniti neque vel officia corporis magnam?</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur, delectus assumenda ab aperiam itaque minus saepe explicabo, repudiandae impedit corrupti suscipit mollitia facere. Assumenda deleniti neque vel officia corporis magnam?</p>
+        </article>
+    </main>
+    <footer>
+        <h2>footer</h2>
+    </footer>
+</body>
+</html>
+
+
+#file style.css
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0px;
+}
+header{
+    background-color: lightgray;
+    text-align: center;
+    padding: 25px;
+}
+.navbar{
+    background-color: hsl(0, 0%, 15%);
+    height: 50px;
+}
+aside{
+    width: 20%;
+    float: left;
+    padding: 10px;
+}
+section{
+    width: 40%;
+    float: left;
+    padding: 10px;
+}
+article{
+    width: 40%;
+    float: left;
+    padding: 10px;
+}
+footer{
+    background-color: lightgray;
+    text-align: center;
+    padding: 25px;
+    display: block;
+    clear: both;
+}
+@media screen and (max-width: 600px){
+    aside, section, article{
+        width: 100%;
+    }
+}

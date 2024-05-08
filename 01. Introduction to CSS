@@ -1,0 +1,99 @@
+CSS = cascading style sheets
+
+1. There are 3 different ways in which 
+we can apply CSS:
+
+2. inline, internal, external
+
+3. inline: we can apply CSS within 
+the same line of the tag in HTML file.
+
+#file index.html
+<body style="background-color: black;">
+<h1 style="color: whitesmoke;">My Website</h1>
+    <p style="color: whitesmoke;">Lorem ipsum dolor sit amet consectetur </p>
+    <p style="color: whitesmoke;">Lorem ipsum dolor sit amet consectetur </p>
+    <p style="color: whitesmoke;">Lorem ipsum dolor sit amet consectetur </p>
+    <p style="color: whitesmoke;">Lorem ipsum dolor sit amet consectetur </p>    
+</body>
+
+4. internal: we apply CSS within header tag.
+
+#file index.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+       body{
+        background-color: black;
+    }
+        h1{
+        color: rgb(214, 214, 72);
+    }
+        p{
+        color: rgb(214, 214, 72);
+    }
+    </style>
+</head>
+
+<body>
+    <h1>My Website</h1>
+    <p>Lorem ipsum dolor sit amet consectetur </p>
+    <p>Lorem ipsum dolor sit amet consectetur </p>
+    <p>Lorem ipsum dolor sit amet consectetur </p>
+    <p>Lorem ipsum dolor sit amet consectetur </p>    
+</body>
+</html> 
+
+5. external: we will create CSS file and then link it to HTML file
+by using a link tag <link>
+
+#file index.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>My Website</h1>
+    <p>Lorem ipsum dolor sit amet consectetur </p>
+    <p>Lorem ipsum dolor sit amet consectetur </p>
+    <p>Lorem ipsum dolor sit amet consectetur </p>
+    <p>Lorem ipsum dolor sit amet consectetur </p>    
+</body>
+</html>
+
+#file style.css
+body{
+    background-color: black;
+}
+h1{
+    color: beige;
+}
+p{
+    color: beige;
+}
+
+
+NOTE: 
+1. In this sample, we select elements by tag name 
+but we can select them by id (if they have), 
+to select the element by id, 
+we will use a # followed by the id name.
+
+2. to apply CSS to a class, 
+we will type . followed by the name of a class
+
+tage name
+#id name
+.class name
+
+3. We can apply one css file 
+to more than one html file.
+
+
+
+
+

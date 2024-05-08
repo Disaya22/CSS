@@ -1,0 +1,136 @@
+Pseudo-elements 
+1. Pseudo-elements are keywords added 
+after a selector that are used to style 
+a specific part of an element.
+
+2. selector::pseudo-element
+
+3. h1::first-letter{
+	……..
+}
+so, we can add some css property 
+and style for the first letter of 
+h1 element.
+
+example1:
+1. We will create an h1 tag with some "text" 
+and then a "paragraph" element 
+and then an unordered "list".
+
+#file index.html (body)
+<h1>Hello</h1>
+<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla quae ex quidem, cumque ut, autem explicabo quia illum est quisquam aperiam cupiditate accusamus nesciunt architecto ipsam natus ratione distinctio vitae?</p>
+<ul id="fruit">
+     <li id="apple">apple</li>
+     <li id="banana">banana</li>
+     <li id="orange">orange</li>
+     <li id="grape">grape</li>
+</ul>
+
+2. we will use the first letter 
+pseudo-element to change the first letter 
+in our h1 elemen
+
+#file style.css
+
+h1::first-letter{
+    font-size: 2em;
+    font-style: italic;
+}
+
+3. Let's select our paragraph. we can apply css properties to the first line of some
+
+NOTE: if we change the size of the window, the first line is still going to have that background color
+
+#file style.css
+p::first-line{
+    background-color: rgb(240, 240, 163);
+}
+
+
+4. add some text —เรื่องนี้ไม่น่าสำคัญ
+
+5. so anything that’s selected will have changed its color
+
+#file style.css
+P::selection{
+    color: rgb(1, 183, 1);
+    background-color: rgb(176, 173, 173);
+}
+
+
+6. we add an item in front of the text 
+we will add a checkmark before any list
+select id fruit and then select all li tag within id fruit
+then add some style for the item
+
+#file style.css
+#fruit li::before{
+    content: "✔";
+color: tomato;
+    font-size: 1.2rem;
+}
+
+this would be better
+#fruit li::marker{
+    content: "✔";
+    color: rgb(217, 37, 6);
+    font-size: 1.2rem;
+}
+
+7. we also can add an item after the text
+#file style.css
+#apple::after{
+    content: "🍎";
+}
+#banana::after{
+    content: "🍌";
+}
+#orange::after{
+    content: "🍊";
+}
+#grape::after{
+    content: "🍇";
+}
+
+
+All CSS Code:
+#file style.css
+h1::first-letter{
+    font-size: 2em;
+    font-style: italic;
+}
+p::first-line{
+    background-color: rgb(240, 240, 163);
+}
+ 
+P::selection{
+    color: rgb(1, 183, 1);
+    background-color: rgb(176, 173, 173);
+}
+
+
+#apple::after{
+    content: "🍎";
+}
+#banana::after{
+    content: "🍌";
+}
+#orange::after{
+    content: "🍊";
+}
+#grape::after{
+    content: "🍇";
+}
+   
+#fruit li::marker{
+    content: "✔";
+    color: rgb(217, 37, 6);
+    font-size: 1.2rem;
+}
+
+
+
+
+
+

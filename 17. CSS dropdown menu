@@ -1,0 +1,157 @@
+#file main.html
+1. create a div section with a class of dropdown
+2. then within the div section, 
+we’ll create a button
+3. create an inner div section with 
+a class of content 
+4. within the content class, 
+5. we’ll create a few hyperlinks
+6. finally, we’ll create a p tag outside 
+the dropdown class
+
+#file main.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="dropdown">
+       <button>Food</button>
+       <div class="content">
+            <a href="">apple</a>            
+            <a href="">banana</a>
+            <a href="">coconut</a>
+       </div>
+    </div>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, provident in neque ipsa non esse? Culpa quam hic placeat temporibus dignissimos fugit nihil, fugiat illo possimus corporis quisquam similique alias.</p>
+</body>
+</html>
+
+
+#file style.css
+1. with our dropdown class, we’ll select any buttons
+2. and then add these css properties
+
+.dropdown button{
+    background-color: #c7c0c0;
+    color: #333;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+}
+
+
+3. within our dropdown menu class, 
+take any <a> element, then apply css properties
+4. remove text decoration, 
+that is the underline, basically
+
+.dropdown a{
+    display: block;
+    color: #333;
+    text-decoration: none;
+    padding: 10px 15px;
+}
+
+
+5. now, we can see that all of the content 
+within dropdown menu is pushing all of 
+the other content on web page down
+6. eventually, we’ll set the position of 
+content class to be absolute to take it out 
+of the normal flow of the web page
+
+.dropdown .content{
+    background-color: hsl(0, 0%, 95%);
+    position: absolute;
+    min-width: 100px;
+    box-shadow: 2px 2px 5px hsla(0, 0%, 0%, 0.8);
+    display: none;
+}
+
+
+7. when we hover over the button, 
+we want the content class to be display
+8. so we’ll take the dropdown class 
+and then apply pseudo-class, hover, 
+with the content class
+9. we’ll set the display property to be block
+
+.dropdown:hover .content{
+    display: block;
+}
+
+
+10. when we hover over the button, 
+we want to change the background color 
+of the button
+11. we’ll take the dropdown class 
+and then apply pseudo-class, hover, 
+with the button element
+
+.dropdown:hover .button{
+    background-color: black;
+}
+
+
+12. when we hover over one of these <a> element, 
+we want the background color to change 
+13. with our dropdown class, take any <a> elements. 
+when we hover over them, change the background color
+
+.dropdown a:hover{
+    background-color: hsl(0, 73%, 82%);
+}
+
+
+14. with the div element, it’s a block level element
+15. so if we hover over the white space, 
+we still display the dropdown menu
+16. so, we will set the display of dropdown class 
+to be inline-block
+
+.dropdown{
+    display: inline-block;
+}
+
+All Code
+#file style.css
+.dropdown button{
+    background-color: #c7c0c0;
+    color: #333;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+}
+.dropdown a{
+    display: block;
+    color: #333;
+    text-decoration: none;
+    padding: 10px 15px;
+}  
+.dropdown .content{
+    background-color: hsl(0, 0%, 95%);
+    position: absolute;
+    min-width: 100px;
+    box-shadow: 2px 2px 5px hsla(0, 0%, 0%, 0.8);
+    display: none;
+}  
+.dropdown:hover .content{
+    display: block;
+}
+.dropdown:hover button{
+    background-color: rgb(141, 140, 140);
+}
+.dropdown a:hover{
+    background-color: hsl(0, 73%, 82%);
+}  
+.dropdown{
+    display: inline-block;
+}
+
+
+

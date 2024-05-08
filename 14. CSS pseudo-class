@@ -1,0 +1,165 @@
+Pseudo-class
+
+1. Pseudo-classes are keywords added 
+to a selector. 
+
+2. Pseudo-classes modify the behavior 
+of an element when they are in a state.
+
+example1:
+We have a button. 
+When we hover the cursor over the button,
+this button will increase font size 
+and change background color.
+
+so, "hover" is an example of a pseudo class 
+because it modifies 
+our buttons behavior active.
+
+#file index.html (only body tags)
+<body>
+    <button>Hello</button>
+</body>
+
+
+#file style.css
+button:hover{
+    font-size: 1.2em;
+    background-color: rgb(187, 243, 212);
+}
+
+
+
+example2:
+Basically, they modify a special state of an element.
+
+To illustrate, we will create a hyperlink
+
+#file index.html
+<body>
+    <a href="https://google.com">Google</a>      
+</body>
+
+#file style.css
+a:link{
+    color: rgba(17, 68, 222, 0.92);
+}
+   
+a:hover{
+    color: brown;
+    font-size: 1.1em;
+}
+   
+a:active{
+    font-size: 1.1em;
+    color: darkgreen;
+}
+   
+a:visited{
+    color: gray;
+}
+
+
+example3:
+1. When we hover over one of these list items, 
+we will change the background color 
+of that list item to be a highlight yellow color
+
+#file index.htmml (only body)
+<body>
+    <li>This is #1</li>
+    <li>This is #2</li>
+    <li>This is #3</li>
+    <li>This is #4</li>
+    <li>This is #5</li>
+    <li>This is #6</li>
+    <li>This is #7</li>
+    <li>This is #8</li>
+    <li>This is #9</li>
+</body>
+
+2. We also select anything that is not being hovered over. 
+Anything that’s not currently being hovered over 
+is gray until we hovered over, 
+it will be yellow.
+
+we will use this state
+
+#file style.css
+li:not(:hover){
+    background-color: rgb(178, 178, 178);
+}
+
+
+3. It means anything that is not in this state 
+will be have these CSS properties
+
+#file style.css
+li:hover{
+    background-color: rgb(238, 238, 101);
+}
+li:not(:hover){
+    background-color: rgb(178, 178, 178);
+}
+
+
+#example4:
+1. then we have :nth-child() pseudo-class
+
+2. in this example, anything that’s selected (type within parenthesis) will set to be yellow
+
+#file style.css
+li:nth-child(3n+2){
+    background-color: yellow;
+}
+
+result #2 #5 #8 will be highlighted 
+to be yellow
+
+
+example5:
+1. We’ll create a div element and then create 
+a paragraph element within the div element.
+
+#file index.html
+<div id="greeting">Hover here
+    <p>Hello</p>
+</div>
+
+2. We want p element to be hidden until we hover over div element.
+
+#file style.css
+#greeting p{
+    background-color: bisque;
+    padding: 10px;
+    display: none;
+}
+
+3.We want the p element of the div section 
+to have the display property of inline, 
+display it as an inline level element.
+
+#file style.css
+#greeting:hover p{
+    display: inline;
+}
+
+4. This syntax will come very handy,
+when we create drop down menus.
+
+#file style.css
+
+#greeting p{
+    background-color: bisque;
+    padding: 10px;
+    display: none;
+}
+#greeting:hover p{
+    display: inline;
+}
+
+
+
+
+
+

@@ -1,0 +1,18 @@
+Border
+1. In thai, border means ขอบ, ล้อมกรอบ
+
+example
+#file style.css
+h1{
+    border-style: solid;
+    border-width: 3px;
+    border-color: blueviolet;
+    border-radius: 9px;
+}
+p{
+    border-bottom: 3px solid red;
+    border-top: 3px solid yellow;
+    border-left: 3px solid green;
+    border-right: 3px solid brown;
+}
+

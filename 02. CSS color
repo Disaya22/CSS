@@ -1,0 +1,12 @@
+color
+
+There are 6 different ways in which we can apply color. 
+
+name ex. blue, tomato, lavender 
+rgb ex. rgb(102, 103, 104)
+#value ex. #333333
+hsl ex. hsl(0, 20%, 30%)
+
+
+
+

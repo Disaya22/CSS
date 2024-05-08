@@ -1,0 +1,78 @@
+Position 
+
+1. There are 5 position values:
+        1. "relative" positions an element relative to where it normally should be
+
+        2. "fixed", with fixed an element is positioned relative to the viewport meaning the web browser 
+
+        3. "absolute", an element is positioned relative to its nearest ancestor. think of an ancestor as a containing class within box one
+
+        4. "sticky", a sticky element is positioned base on the current scroll position meaning our scroll bar
+
+        5. "static", it is a default position for an element
+
+2. relative 
+        1. if we set top to be 100px, this element will be pushed downwards by 100px relative to where it normally is
+
+#file index.html (only body)
+<body>
+    <div id="box1"></div>    
+</body>
+
+#file style.css
+#box1{
+    width: 200px;
+    height: 200px;
+    background-color: aquamarine;
+    position: relative;
+    top: 100px;
+    left: 100px;
+}
+
+3. fixed
+        1. an element is fixed in my viewport (my web browser) even though we scroll down the web browser
+
+        2. it might be good for an advertisement if we had a banner
+
+4. absolute
+        1. for example, box2 is contained within box1. so, box1 is its nearest ancestor. if we move box1, box2 is still going to stay the same place within box1
+
+example
+file index.html (only body)
+<body>
+    <div id="box1">
+        <div id="box2"></div>
+    </div>    
+</body>
+
+
+#file style.css
+#box1{
+    width: 200px;
+    height: 200px;
+    background-color: aquamarine;
+    position: relative;
+    /* top:100px; */
+    /* left: 100px; */
+}
+
+#box2{
+    width: 100px;
+    height: 100px;
+    background-color: rgb(255, 157, 127);
+    position: absolute;
+}
+
+5. sticky
+        1. when we scroll down our web browser is going to catch the element
+
+        2. sticky is kind of similar to fixed, but sticky will reserve some space for the original element
+
+        3. มันจะไม่ทับข้อความ
+
+        4. our element won't be overlapped the text until we scroll down the scroll bar
+
+6. static
+        1. to be continue
+
+        

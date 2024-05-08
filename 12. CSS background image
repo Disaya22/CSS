@@ -1,0 +1,29 @@
+Background Image
+
+1. background-image: url(file path);
+        1. import file image
+        2. it the img is a high solution picture, we can add suffix -small to shrink the img
+
+2. background-repeat: no-repeat;
+
+3. background-position: center;
+        1. center the img in the middle of our viewport
+
+4. background-attachment: fixed;
+        1. this property sets whether a background image scrolls with the rest of the page or is it fixed
+        2. now, we set it to be fixed
+        3. so, the img is in the middle of viewport even we were to expand or contract it
+
+5. background-size: cover;
+        1. make the img take up the entire space of the background
+
+example 
+#file style.css
+
+body{
+    background-image: url(shinchan.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}

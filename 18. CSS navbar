@@ -1,0 +1,101 @@
+Navbar
+
+#file index.html (only body)
+1. create h1 title
+2. create nav tag which is known as a navigation element <nav> and set this nav element a class of navbar
+3. within <nav>, we’ll create an unordered list that contains list elements
+4. we’ll turn a text inside list element into a hyperlink
+
+    <h1>Hello, the Universe</h1>
+    <nav class="navbar">
+        <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Product</a></li>
+            <li><a href="">Contact</a></li>
+        </ul>  
+    </nav>
+
+5. outside the navbar, we’ll use main element for the main content for the web page
+6. add h3 and <p> inside the main element
+
+<main>
+<h3>This is the Home page</h3>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore error culpa nostrum. Quo repellat veniam deserunt assumenda esse harum quod, reiciendis culpa aliquid doloremque magnam quis possimus cum soluta inventore!</p>
+</main>
+
+7. link to other files
+
+All Code 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Hello, the Universe</h1>
+    <nav class="navbar">
+        <ul>
+            <li><a href="main.html">Home</a></li>
+            <li><a href="About.html">About</a></li>
+            <li><a href="Product.html">Product</a></li>
+            <li><a href="Contact.html">Contact</a></li>
+        </ul>  
+    </nav>
+    <main>
+        <h3>This is the Home page</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore error culpa nostrum. Quo repellat veniam deserunt assumenda esse harum quod, reiciendis culpa aliquid doloremque magnam quis possimus cum soluta inventore!</p>
+    </main>    
+</body>
+</html>
+
+
+#file style.css
+1. add some css properties for h1 element
+
+
+2. take the navbar class and then select the unordered list to add some css properties
+
+
+3. take the navbar class and then select the <a> to add some css properties
+
+
+4. add pseudo-class to <a> 
+
+
+6. we will make our navbar be horizontal
+7. with the navbar class take any list items 
+8. and then set overflow to be hidden at .navbar ul{}
+
+All Code
+body{
+    margin: 0px;
+}
+main{
+    margin: 20px;
+}
+h1{
+    text-align: center;
+}
+.navbar ul{
+    list-style-type: none;
+    background-color: hsl(0, 0%, 25%);
+    padding: 0px;
+    margin: 0px;
+    overflow: hidden;
+}
+.navbar a{
+    color:azure;
+    text-decoration: none;
+    padding: 15px;
+    display: block;
+    text-align: center;
+}
+.navbar a:hover{
+    background-color: hsl(0, 0%, 15%);
+}
+.navbar li{
+    float: left;
+}
+

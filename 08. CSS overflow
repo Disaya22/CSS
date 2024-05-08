@@ -1,0 +1,59 @@
+Overflow
+
+1. Overflow is a property that sets the desired 
+behavior when content does not quite fit 
+in the parent element box meaning it overflows.
+
+2. There’re 5 states:
+        1. overflow: visible
+        2. overflow: hidden
+	       Any content that will overflow 
+           outside of the bow will be hidden
+
+        3. overflow: clip
+        4. overflow: scroll
+           Our box will contain the scroll bar 
+           both horizontal and vertical. 
+           We can use the scroll bar to see 
+           the entire length of content. 
+           We still have the scroll bar,
+           although it’s disabled (the content
+           fit in the box).
+
+        5. overflow: auto 
+           Like scroll, but we don’t see the scroll bar 
+           until we do need it (the content doesn't
+           fit in the box).
+
+example
+#file index.html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div>    
+        <p>Lorem ipsum dolor sit amet consectetur 
+        adipisicing elit. Hic illum ea, tempora 
+        inventore sint, corrupti, officia sed beatae 
+        aut qui illo provident repudiandae voluptas 
+        at dolor. A perferendis recusandae 
+        laboriosam.</p>
+    </div>
+ 
+</body>
+</html>
+
+
+#file style.css
+
+div{
+    border: solid;
+    height: 50px;
+    overflow: auto;
+}
+

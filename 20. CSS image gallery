@@ -1,0 +1,83 @@
+Image Gallery
+
+#file index.html
+1. create a div section and then set a class of gallery
+2. include the  image then set the width equal to 200px
+3. turn this image into a hyperlink by surrounding it with a pair of <a>
+
+4. we can open this image in a new tap by setting the target attribute to equals _blank
+5. then set the href attribute to be the source of th image
+
+6. create a div section with a class of description within div of gallery classs
+7. and add some text (just the name of the image) 
+
+8. repeat all of them twice with other images
+
+#file index.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div>
+        <a target="_blank" href="Portofino.jpg">
+            <img src="Portofino.jpg" width="200px">
+        </a>
+        <div class="description">Portofino</div>
+    </div>
+    <div>
+        <a target="_blank" href="lake como.jpg">
+            <img src="lake como.jpg" width="200px">
+        </a>
+        <div class="description">Lake Como</div>
+    </div>
+    <div>
+        <a target="_blank" href="Cinque-Terre.jpg">
+            <img src="Cinque-Terre.jpg" width="200px">
+        </a>
+        <div class="description">Cinque Terre</div>
+    </div>
+</body>
+</html>
+
+
+#file style.css
+
+1. select galllery class and then set css properties
+
+
+2. select all description class within gallery class and then add some css properties
+
+
+3. when we hovor over, we’ll change the border color
+4. add pseudo-class to gallery class
+
+
+5. delete the width properties in html file
+6. select all img tag within gallery class
+7. and then set the img widht to be 100%
+
+8. then we’ll set the width in gallery class to be 200px
+
+9. so basically what we did is that we set the width of each image to be 100% of the width of the gallery ( not 100% of the original image)
+
+#file style.css
+.gallery{
+    display: inline-block;
+    border: 1px solid hsl(0, 1%, 60%);
+    margin: 5px;
+    width: 200px;
+}
+.gallery .description{
+    padding: 10px;
+    text-align: center;
+}
+.gallery:hover{
+    border: 1px solid hsl(240, 1%, 10%);;
+}
+.gallery img{
+    width: 100%;
+    height: auto;
+}

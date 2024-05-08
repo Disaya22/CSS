@@ -1,0 +1,53 @@
+Margins
+
+1. margins = space around an element 
+
+example
+#file index.html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+
+
+    <h1>My Website</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic illum ea, tempora inventore sint, corrupti, officia sed beatae aut qui illo provident repudiandae voluptas at dolor. A perferendis recusandae laboriosam.</p>
+ 
+    <div class="box" id="box1">box1</div>
+    <div class="box" id="box2">box2</div>
+</body>
+</html>
+
+body{
+    margin: 0px;
+}
+
+
+.box{
+    border: 5px solid;
+    font-size: 3em;
+    width: 100px;
+    height: 100px;
+}
+   
+#box1{
+    background-color: red;
+    /* margin-top: 50px; */
+    /* margin-bottom: 50px; */
+    /* margin-left: 50px; */
+    /* margin-right: 50px; */
+    /* margin-left: auto;  */
+    /* margin-left:auto; box1 will locate at the very left side automatically */
+    margin: auto;
+    /* box1 will stay in the center of the web browser */
+}
+   
+ #box2{
+    background-color: blue;
+}

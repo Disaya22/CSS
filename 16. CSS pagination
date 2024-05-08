@@ -1,0 +1,174 @@
+Pagination
+1. Pagination is a method by which a document is separated into pages, and numbers are given
+Using pagination, we can move between pages easily.
+may be useful on your web page if you need to limit your result
+
+2. Using pagination, we can move between pages easily.
+
+3. May be useful on your web page if you need to limit your result.
+
+#file HTML
+#file main.HTML (only body)
+1. we will create h1 and paragraph element
+2. and then a div element with a class of pagination
+3. within this div element, we’ll create several hyperlinks using <a> 
+4. this example, we will create 5 links
+
+<h1>This is page #1</h1>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel expedita modi sed molestiae laboriosam dicta in nobis, optio cupiditate architecto eveniet esse explicabo harum aspernatur amet quasi, minima similique autem!</p>
+<div class="pagination">
+    <a><</a>
+    <a>1</a>
+    <a>2</a>
+    <a>3</a>
+    <a>4</a>
+    <a>5</a>
+    <a>></a>
+</div>
+
+#see also file .html page #2, #3, #4, #5
+
+#file style.css
+
+1. select the class of pagination 
+and then add css some properties 
+
+.pagination{
+    text-align: center;
+}
+
+2. then we will set css style all of <a> 
+
+.pagination a{
+    color: #333;
+    text-decoration: none;
+    padding: 8px 15px;
+    display: inline-block;
+}
+
+3. next, we will highlight the selected number
+4. within the pagination class, within any anchor tags find the class that is active
+5. in this case, it would be page #1
+
+#file main.html (<a>1</a>)
+
+<a class="active">1</a>
+
+6. we will change the background color, font size and border-radius.
+
+#file style.css
+.pagination a.active{
+    background-color: plum;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+7. well, any element is not active, we can also style them 
+8. so we will select pagination class with any <a> elements 
+and we will use the hover pseudo-class 
+9. if these elements are hovered over 
+but they’re not active then we’ll use :not pseudo-class 
+to find any element that are not within 
+the active class to highlight them with 
+different color
+
+#file style.css
+.pagination a:hover:not(.active){
+    background-color: rgb(212, 212, 212);
+    border-radius: 5px;
+}
+
+10. back to main.html
+11. we need some function for these pages
+12. if we click on one that should 
+take us to the first file (main.html)
+13. the second link will bring to a page 
+named page #2
+14. and so on 
+
+#file main.html
+<body>
+    <h1>This is page #1</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel expedita modi sed molestiae laboriosam dicta in nobis, optio cupiditate architecto eveniet esse explicabo harum aspernatur amet quasi, minima similique autem!</p>
+    <div class="pagination">
+        <a href="main.html"><</a>
+        <a href="main.html" class="active">1</a>
+        <a href="page2.html">2</a>
+        <a href="page3.html">3</a>
+        <a href="page4.html">4</a>
+        <a href="page5.html">5</a>
+        <a href="page2.html">></a>
+    </div>
+
+15. we will create page2 .html
+16. we will copy all code from main.html
+17. and we will correct some text 
+18. add class active to <a>2</a>
+
+#file page2.html
+<body>
+    <h1 style="color: purple;">This is page #2</h1>
+    <p style="color: purple;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel expedita modi sed molestiae laboriosam dicta in nobis, optio cupiditate architecto eveniet esse explicabo harum aspernatur amet quasi, minima similique autem!</p>
+   
+    <div class="pagination">
+        <a href="main.html"><</a>
+        <a href="main.html">1</a>
+        <a href="page2.html" class="active">2</a>
+        <a href="page3.html">3</a>
+        <a href="page4.html">4</a>
+        <a href="page5.html">5</a>
+        <a href="page3.html">></a>
+    </div>
+</body>
+
+19. and so on
+
+
+
+All Code 
+
+#file main.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>This is page #1</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel expedita modi sed molestiae laboriosam dicta in nobis, optio cupiditate architecto eveniet esse explicabo harum aspernatur amet quasi, minima similique autem!</p>
+    <div class="pagination">
+        <a href="main.html"><</a>
+        <a href="main.html" class="active">1</a>
+        <a href="page2.html">2</a>
+        <a href="page3.html">3</a>
+        <a href="page4.html">4</a>
+        <a href="page5.html">5</a>
+        <a href="page2.html">></a>
+    </div>
+</body>
+</html>
+
+
+#file page2.html and others, at folder
+
+All Code 
+#file style.css
+.pagination{
+    text-align: center;
+}
+.pagination a{
+    color: #333;
+    text-decoration: none;
+    padding: 8px 15px;
+    display: inline-block;
+}  
+.pagination a.active{
+    background-color: plum;
+    font-weight: bold;
+    border-radius: 5px;
+}
+.pagination a:hover:not(.active){
+    background-color: rgb(212, 212, 212);
+    border-radius: 5px;
+}

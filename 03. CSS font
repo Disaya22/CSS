@@ -1,0 +1,16 @@
+Fonts
+
+1. type of Fonts:
+        serif
+        sans-serif
+
+2. font-family: verdana, arial
+If our web browser can’t display verdana, 
+the next available font is arial.
+
+3. font-size: 
+        px
+        1em = 100% = normal size
+	    2em = 200%
+
+

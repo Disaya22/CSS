@@ -1,0 +1,22 @@
+1. We can apply shadow to our elements.
+
+example
+#file style.css
+h1{
+    text-shadow: 3px 5px 4px rgb(103, 205, 226),
+        -3px -5px 4px rgb(237, 100, 100);
+}
+
+#box{
+    width: 100px;
+    height: 100px;
+    background-color:bisque;
+    box-shadow: 3px 5px 4px;
+}
+
+
+NOTE:
+
+3px for horizontal
+5px for vertical
+4px for blur
